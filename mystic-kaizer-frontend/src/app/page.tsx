@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AiFillInstagram, AiFillTwitterCircle, AiFillYoutube } from "react-icons/ai";
+import { Reveal } from "./components/reveal";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#111] text-white font-dark-mystic">
@@ -17,7 +18,7 @@ export default function Home() {
               More
             </a>
             <a href="#" className="hover:text-blue-400 transition-colors">
-              Buy
+              Marketplace
             </a>
           </div>
         </div>
@@ -75,9 +76,12 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-20 px-6 bg-[url('/landing-page/about.png')] bg-cover bg-center">
         <div className="max-w-7xl mx-auto flex flex-col gap-6">
-          <div className="text-6xl leading-16 text-left w-md">
-            Dive Into the Mystic Kaizer Universe
-          </div>
+          <Reveal direction="left">
+            <div className="text-6xl leading-16 text-left w-md">
+              Dive Into the Mystic Kaizer Universe
+            </div>
+          </Reveal>
+          <Reveal direction="left">
           <div className="flex flex-row items-center">
             <Image
               src="/landing-page/diamond-right.svg"
@@ -93,6 +97,7 @@ export default function Home() {
               height={10}
             />
           </div>
+          </Reveal>
           <div className="text-2xl text-justify font-inter">
             In a time not far from now, the world stands on the edge of chaos.
             Human greed and technological overreach have disrupted the Elemental
@@ -116,24 +121,29 @@ export default function Home() {
             Veil—and their actions in both the digital and physical realms
             determine the future.
           </div>
-          <div className="flex flex-row items-center w-full justify-end">
-            <Image
-              src="/landing-page/diamond-right.svg"
-              alt="line"
-              width={12}
-              height={12}
+          <Reveal direction="right" width="100%">
+            <div className="flex flex-row items-center w-full justify-end">
+              <Image
+                src="/landing-page/diamond-right.svg"
+                alt="line"
+                width={12}
+                height={12}
             />
             <hr className="lg:w-[200px] xl:w-[300px] h-[1.5px] bg-white" />
             <div className="text-2xl ml-4">Mystic Kaiser</div>
           </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="py-20 px-6 bg-white">
         <div className=" mx-auto flex flex-col gap-6">
-          <div className="max-w-7xl mx-auto text-6xl text-black w-full">
-            Story Of The Kaizers
-          </div>
+          <Reveal direction="left" width="100%" >
+            <div className="max-w-7xl mx-auto text-6xl text-black w-full">
+              Story Of The Kaizers
+            </div>
+          </Reveal>
+          <Reveal direction="left" width="100%">
           <div className="max-w-7xl mx-auto flex flex-row items-center text-black w-full">
             <Image
               src="/landing-page/diamond-right.svg"
@@ -151,6 +161,7 @@ export default function Home() {
               className="invert"
             />
           </div>
+          </Reveal>
           <div className=" max-w-7xl mx-auto relative w-full overflow-visible">
             <div className="pl-3 flex flex-row items-center gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide overflow-visible h-[450px]">
               {[1, 2, 3, 4, 5].map((num) => (
@@ -174,9 +185,11 @@ export default function Home() {
 
       <section className="py-20 px-6 bg-[url('/landing-page/collections.png')] bg-cover bg-center">
         <div className="max-w-7xl mx-auto flex flex-col gap-6 justify-center items-center h-[870px]">
-          <div className="text-6xl w-full text-center">
-            The Kaizer Collections
-          </div>
+          <Reveal>
+            <div className="text-6xl w-full text-center">
+              The Kaizer Collections
+            </div>
+          </Reveal>
           <div className="flex flex-row items-center">
             <Image
               src="/landing-page/diamond-right.svg"
@@ -203,6 +216,143 @@ export default function Home() {
           height={789}
           className=""
         />
+      </section>
+
+      <section className="bg-white py-20 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col gap-6 justify-center items-center relative">
+            <div className="absolute top-0">
+              <Image 
+                src="/landing-page/footer-title.png" 
+                alt="title" 
+                width={700} 
+                height={133}
+              />
+            </div>
+
+          <Reveal width="100%">
+            <div className="text-6xl text-black w-full text-center mt-16">
+              RoadMap
+            </div>
+          </Reveal>
+          <Reveal width="100%">
+            <div className="flex flex-row items-center justify-center">
+              <Image
+                src="/landing-page/diamond-right.svg"
+                alt="line"
+                width={10}
+                height={10}
+                className="invert"
+              />
+              <hr className="lg:w-[100px] xl:w-[300px] h-[2px] bg-black" />
+              <Image
+                src="/landing-page/diamond-left.svg"
+                alt="line"
+                width={10}
+                height={10}
+                className="invert"
+              />
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full text-black">
+            {/* Phase 1 - Active */}
+
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border-2 border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)] relative">
+              <div className="absolute -top-4 left-4 bg-blue-500 text-white px-4 py-1 rounded-full text-sm">
+                CURRENT PHASE
+              </div>
+              <h3 className="text-3xl font-bold mb-4">Phase 1: Awakening the Kaizers</h3>
+              <ul className="space-y-3 font-inter">
+                <li className="flex items-center gap-2">
+                  <span className="text-green-500">✅</span>
+                  <span className="text-black/90"><strong>Project Reveal</strong> – Introduce the Mystic Kaizer universe and its rarity system</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-500">✅</span>
+                  <span className="text-black/90"><strong>Website Launch</strong> – Release an interactive landing page with lore and minting details</span>
+                </li>
+                <li className="flex items-center gap-2 animate-pulse">
+                  <span className="text-blue-500">⏳</span>
+                  <span className="text-blue-500"><strong>NFT Minting Event</strong> – Open the Mystic Kaizer Genesis mint (limited supply)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-black/50">🔓</span>
+                  <span className="text-black/50"><strong>Kaizer Explorer</strong> – Launch a rarity explorer for holders</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Phase 2 - Locked */}
+            <div className="bg-white/40 backdrop-blur-sm p-8 rounded-2xl border border-black/10 opacity-75 relative">
+              <div className="absolute -top-4 left-4 bg-black/60 text-white px-4 py-1 rounded-full text-sm">
+                PHASE 2
+              </div>
+              <h3 className="text-3xl font-bold mb-4 text-black/60">Phase 2: Rise of the Anomalies</h3>
+              <ul className="space-y-3 font-inter text-black/60">
+                <li className="flex items-center gap-2">
+                  <span>🔒</span>
+                  <span><strong>Anomaly Reveal Event</strong> – Epic+ Kaizers unlock exclusive traits</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>🔒</span>
+                  <span><strong>Evolution Mechanism</strong> – NFT upgrades through quests or burn mechanics</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>🔒</span>
+                  <span><strong>Kaizer Council (DAO)</strong> – Legendary/Mythic holders vote on future initiatives</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Phase 3 - Locked */}
+            <div className="bg-white/40 backdrop-blur-sm p-8 rounded-2xl border border-black/10 opacity-75 relative">
+              <div className="absolute -top-4 left-4 bg-black/60 text-white px-4 py-1 rounded-full text-sm">
+                PHASE 3
+              </div>
+              <h3 className="text-3xl font-bold mb-4 text-black/60">Phase 3: The Forgotten Realms</h3>
+              <ul className="space-y-3 font-inter text-black/60">
+                <li className="flex items-center gap-2">
+                  <span>🔒</span>
+                  <span><strong>Realm Unlocks</strong> – Interactive lore-based quest with new NFT classes</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>🔒</span>
+                  <span><strong>Airdrop & Rewards</strong> – Mystic artifacts for holders</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>🔒</span>
+                  <span><strong>Hidden Kaizers</strong> – Secret 1/1 NFTs hidden within the realms</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Phase 4 - Locked */}
+            <div className="bg-white/40 backdrop-blur-sm p-8 rounded-2xl border border-black/10 opacity-75 relative">
+              <div className="absolute -top-4 left-4 bg-black/60 text-white px-4 py-1 rounded-full text-sm">
+                PHASE 4
+              </div>
+              <h3 className="text-3xl font-bold mb-4 text-black/60">Phase 4: Beyond the Veil</h3>
+              <ul className="space-y-3 font-inter text-black/60">
+                <li className="flex items-center gap-2">
+                  <span>🔒</span>
+                  <span><strong>IRL Utility</strong> – Exclusive merchandise and event passes</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>🔒</span>
+                  <span><strong>Mystic Kaizer Mini-Games</strong> – Interactive PvE quests</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>🔒</span>
+                  <span><strong>Multichain Expansion</strong> – Integration with other chains/metaverse</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-2xl text-black/80 text-center italic mt-8">
+            "The journey is just beginning—will you shape the fate of the Mystic Kaizers?"
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
