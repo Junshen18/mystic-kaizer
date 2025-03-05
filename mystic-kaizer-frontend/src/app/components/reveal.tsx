@@ -1,9 +1,10 @@
 "use client";
+import React from 'react';
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface Props {
-    children: JSX.Element;
+    children: React.ReactElement;
     width?: "fit-content" | "100%";
     className?: string;
     direction?: "bottom" | "left" | "right";
@@ -27,25 +28,17 @@ export const Reveal = ({
             case "left":
                 return {
                     hidden: { opacity: 0, x: -75 },
-                    visible: { opacity: 1, x: 0 },
-                    transition: {
-                        duration: 0.5,
-                        delay: delay,
-                    },
+                    visible: { opacity: 1, x: 0 }
                 };
             case "right":
                 return {
                     hidden: { opacity: 0, x: 75 },
-                    visible: { opacity: 1, x: 0 },
-                    transition: {
-                        duration: 0.5,
-                        delay: delay,
-                    },
+                    visible: { opacity: 1, x: 0 }
                 };
             default: // bottom
                 return {
                     hidden: { opacity: 0, y: 75 },
-                    visible: { opacity: 1, y: 0 },
+                    visible: { opacity: 1, y: 0 }
                 };
         }
     };
@@ -60,7 +53,7 @@ export const Reveal = ({
         <div 
             ref={ref} 
             className={className}
-            style={{ position: 'relative', width, overflow: 'hidden' }}
+            style={{ position: 'relative', width, overflow: 'visible' }}
         >
             <motion.div
                 variants={getVariants()}

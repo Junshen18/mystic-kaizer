@@ -256,7 +256,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full text-black">
             {/* Phase 1 - Active */}
-
+            <Reveal direction="bottom" width="100%" delay={1.2}>
             <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border-2 border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)] relative">
               <div className="absolute -top-4 left-4 bg-blue-500 text-white px-4 py-1 rounded-full text-sm">
                 CURRENT PHASE
@@ -281,7 +281,8 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-
+            </Reveal>
+            <Reveal direction="bottom" width="100%" delay={1.2}>
             {/* Phase 2 - Locked */}
             <div className="bg-white/40 backdrop-blur-sm p-8 rounded-2xl border border-black/10 opacity-75 relative">
               <div className="absolute -top-4 left-4 bg-black/60 text-white px-4 py-1 rounded-full text-sm">
@@ -303,7 +304,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-
+            </Reveal>
             {/* Phase 3 - Locked */}
             <div className="bg-white/40 backdrop-blur-sm p-8 rounded-2xl border border-black/10 opacity-75 relative">
               <div className="absolute -top-4 left-4 bg-black/60 text-white px-4 py-1 rounded-full text-sm">
