@@ -5,7 +5,9 @@ import {
   AiFillYoutube,
 } from "react-icons/ai";
 import { Reveal } from "./components/reveal";
+
 export default function Home() {
+
   return (
     <div className="min-h-screen bg-[#111] text-white font-dark-mystic">
       {/* Navigation */}
@@ -411,14 +413,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[url('/landing-page/community.png')] bg-cover bg-center py-20 px-6">
-        <div className="h-[calc(100vh-10vh)] mx-auto flex flex-col gap-6 justify-center items-center relative">
-          <Reveal width="100%" >
+      <section className="bg-[url('/landing-page/community.png')] bg-cover bg-center py-20 px-6 h-【100vh】">
+        <div className=" mx-auto flex flex-col gap-6 justify-center items-center relative">
+          <Reveal width="100%">
             <div className="text-6xl text-white w-full text-center mt-16">
               Find Or Create Your Community
             </div>
           </Reveal>
-          <Reveal width="100%" >
+          <Reveal width="100%">
             <div className="flex flex-row items-center justify-center">
               <Image
                 src="/landing-page/diamond-right.svg"
@@ -446,41 +448,56 @@ export default function Home() {
               height={1000}
               className="w-full h-full"
             />
-            <Image
-              src="/landing-page/malaysia.svg"
-              alt="malaysia"
-              width={60}
-              height={55}
-              className="absolute top-[50%] left-[42%] w-[4vw]"
-            />
-            <Image
-              src="/landing-page/japan.svg"
-              alt="japan"
-              width={60}
-              height={55}
-              className="absolute top-[19%] left-[49%] w-[4vw]"
-            />
-            <Image
-              src="/landing-page/china.svg"
-              alt="china"
-              width={60}
-              height={55}
-              className="absolute top-[14%] left-[35%] w-[4vw]"
-            />
-            <Image
-              src="/landing-page/us.svg"
-              alt="us"
-              width={60}
-              height={55}
-              className="absolute top-[13%] left-[73%] w-[4vw]"
-            />
-            <Image
-              src="/landing-page/thailand.svg"
-              alt="thailand"
-              width={60}
-              height={55}
-              className="absolute top-[35%] left-[39%] w-[4vw]"
-            />
+            <div className="absolute top-[50%] left-[42%] w-[4vw]">
+              <Reveal direction="bottom" width="100%" delay={1.2}>
+                <Image
+                  src="/landing-page/malaysia.svg"
+                  alt="malaysia"
+                  width={80}
+                  height={100}
+                />
+              </Reveal>
+            </div>
+            <div className="absolute top-[19%] left-[49%] w-[4vw]">
+              <Reveal direction="bottom" width="100%" delay={1.4}>
+                <Image
+                  src="/landing-page/japan.svg"
+                  alt="japan"
+                  width={80}
+                  height={100}
+                />
+              </Reveal>
+            </div>
+            <div className="absolute top-[14%] left-[35%] w-[4vw]">
+              <Reveal direction="bottom" width="100%" delay={1.6}>
+                <Image
+                  src="/landing-page/china.svg"
+                  alt="china"
+                  width={80}
+                  height={100}
+                />
+              </Reveal>
+            </div>
+            <div className="absolute top-[13%] left-[73%] w-[4vw]">
+              <Reveal direction="bottom" width="100%" delay={1.8}>
+                <Image
+                  src="/landing-page/us.svg"
+                  alt="us"
+                  width={80}
+                  height={100}
+                />
+              </Reveal>
+            </div>
+            <div className="absolute top-[35%] left-[39%] w-[4vw]">
+              <Reveal direction="bottom" width="100%" delay={1.2}>
+                <Image
+                  src="/landing-page/thailand.svg"
+                  alt="thailand"
+                  width={80}
+                  height={100}
+                />
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
