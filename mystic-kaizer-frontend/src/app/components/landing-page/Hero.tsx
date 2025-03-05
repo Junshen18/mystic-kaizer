@@ -40,14 +40,14 @@ export default function Hero() {
         alt="border"
         width={100}
         height={876}
-        className="absolute top-5 left-12 h-[calc(100vh-20vh)]"
+        className="absolute top-20 left-12 h-[calc(100vh-20vh)]"
       />
       <Image
         src="/landing-page/border.svg"
         alt="border"
         width={100}
         height={876}
-        className="absolute top-5 right-12 h-[calc(100vh-20vh)]"
+        className="absolute top-20 right-12 h-[calc(100vh-20vh)]"
       />
     </section>
   );
